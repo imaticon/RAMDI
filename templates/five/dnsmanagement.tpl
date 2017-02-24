@@ -94,7 +94,7 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<form method="post" action="{$smarty.server.PHP_SELF}?action=managednszone">
+					<form method="post" action="dnsmanagement.php?action=managednszone">
 						<input type="hidden" name="domainid" value="{if $domainid}{$domainid}{else}{$id}{/if}"/>
 						<input type="hidden" name="domain" value="{$domain}"/>
 						{foreach key=num item=defaultdns from=$requirednsservers.0}
@@ -116,7 +116,7 @@
 	<thead>
 		<tr>
 			<th class="textcenter">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="nsrecordtype" value="A"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
@@ -128,7 +128,7 @@
 				</form>
 			</th>
 			<th class="textcenter">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="nsrecordtype" value="AAAA"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
@@ -140,7 +140,7 @@
 				</form>
 			</th>
 			<th class="textcenter">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="nsrecordtype" value="CNAME"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
@@ -152,7 +152,7 @@
 				</form>
 			</th>
 			<th class="textcenter">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="nsrecordtype" value="MX"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
@@ -168,7 +168,7 @@
 	<thead>
 		<tr>
 			<th class="textcenter">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="nsrecordtype" value="NS"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
@@ -180,7 +180,7 @@
 				</form>
 			</th>
 			<th class="textcenter">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="nsrecordtype" value="TXT"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
@@ -192,7 +192,7 @@
 				</form>
 			</th>
 			<th class="textcenter">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="nsrecordtype" value="SRV"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
@@ -204,7 +204,7 @@
 				</form>
 			</th>
 			<th class="textcenter">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="nsrecordtype" value="SOA"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
@@ -224,7 +224,7 @@
 {if $recordtype neq "SOA"}
 <div class="searchbox">
 	<div style="float:left;padding:0px 3px 2px 0px;">
-		<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszoneadd">
+		<form method="POST" action="dnsmanagement.php?action=managednszoneadd">
 			<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
 			<input type="hidden" name="domainid" value="{$domainid}"/>
 			<input type="hidden" name="domain" value="{$domain}"/>
@@ -238,7 +238,7 @@
 	{if $googleapps}
 		{if $recordtype eq "A" || $recordtype eq "AAAA" || $recordtype eq "MX" || $recordtype eq "CNAME" || $recordtype eq "SRV" || $recordtype eq "TXT"}
 			<div style="float:left;padding:0px 3px 3px 0px;">
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+				<form method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="googleapps" value="true"/>
 					<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
@@ -253,7 +253,7 @@
 		{/if}
 	{/if}
 	<div style="float:left;padding:0px 3px 3px 0px;">
-		<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszoneview">
+		<form method="POST" action="dnsmanagement.php?action=managednszoneview">
 			<input type="hidden" name="domainid" value="{if $domainid}{$domainid}{else}{$id}{/if}"/>
 			<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
 			<input type="hidden" name="nsrecordtype" value="{if $recordtype}{$recordtype}{else}A{/if}"/>
@@ -270,7 +270,7 @@
 
 {if $recordtype neq "SOA"}
 <div class="searchbox">
-    <form method="post" action="{$smarty.server.PHP_SELF}?action=managednszone">
+    <form method="post" action="dnsmanagement.php?action=managednszone">
         <div class="input-append">
 		<input type="text" name="q" value="{if $q}{$q}{else}{$LANG.rcdns_searchenterdomain}{/if}" class="input-medium appendedInputButton" onfocus="if(this.value=='{$LANG.rcdns_searchenterdomain}')this.value=''" />
 		<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
@@ -302,10 +302,10 @@
 <table class="table table-striped table-framed">
     <thead>
         <tr>
-			<th {if $orderby eq "host"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=host&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_searchnametitle}</a></th>
-			<th {if $orderby eq "value"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=value&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_txtrecordvalue}</a></th>
+			<th {if $orderby eq "host"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=host&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_searchnametitle}</a></th>
+			<th {if $orderby eq "value"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=value&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_txtrecordvalue}</a></th>
 			<th><a href="#" onclick="return false">{$LANG.rcdns_ttltitle}</a></th>
-			<th {if $orderby eq "status"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=status&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_dnsrecordstatus}</a></th>
+			<th {if $orderby eq "status"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=status&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_dnsrecordstatus}</a></th>
 			<th colspan="2" align="center"><a href="#" onclick="return false">{$LANG.rcdns_dnsactions}</a></th>
 			<th><input id="select-all-records" type="checkbox" /></th>
 		</tr>
@@ -318,7 +318,7 @@
 			<td>{$service.timetolive}</td>
 			<td>{if $service.status eq "Active"}<span class="label active">{$LANG.clientareaactive}</span>{else}<span class="label suspended">{$LANG.clientareasuspended}</span>{/if}</td>
 			<td>
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszonemodify">
+				<form method="POST" action="dnsmanagement.php?action=managednszonemodify">
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input name="freednshosting" value="{$freednshosting}" type="hidden">
 					<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
@@ -331,7 +331,7 @@
 				</form>
 			</td>
 			<td>
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone" onclick="return confirmDelete();">
+				<form method="POST" action="dnsmanagement.php?action=managednszone" onclick="return confirmDelete();">
 					<input type="hidden" name="delete" value="true"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
@@ -356,7 +356,7 @@
 			<td colspan="7">
 				{if $searchdataKey}
 				<div style="float:right;">
-					<form id="multidelete" method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+					<form id="multidelete" method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="delete" value="true"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
@@ -371,7 +371,7 @@
 				{/if}
 				{if $q neq ""}
 				<div style="float:left;">
-					<form method="post" action="{$smarty.server.PHP_SELF}?action=managednszone">
+					<form method="post" action="dnsmanagement.php?action=managednszone">
 						<input type="hidden" name="q" value=""/> 
 						<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
 						<input type="hidden" name="domainid" value="{$domainid}"/>
@@ -391,11 +391,11 @@
 <table class="table table-striped table-framed">
     <thead>
         <tr>
-			<th {if $orderby eq "host"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=host&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_searchnametitle}</a></th>
-			<th {if $orderby eq "value"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=value&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_txtrecordvalue}</a></th>
+			<th {if $orderby eq "host"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=host&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_searchnametitle}</a></th>
+			<th {if $orderby eq "value"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=value&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_txtrecordvalue}</a></th>
 			<th><a href="#" onclick="return false">{$LANG.rcdns_ttltitle}</a></th>
 			<th><a href="#" onclick="return false">{$LANG.rcdns_prioritytitle}</a></th>
-			<th {if $orderby eq "status"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=status&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_dnsrecordstatus}</a></th>
+			<th {if $orderby eq "status"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=status&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_dnsrecordstatus}</a></th>
 			<th colspan="2" align="center"><a href="#" onclick="return false">{$LANG.rcdns_dnsactions}</a></th>
 			<th><input id="select-all-records" type="checkbox" /></th>
 		</tr>
@@ -409,7 +409,7 @@
 			<td>{$service.priority}</td>
 			<td>{if $service.status eq "Active"}<span class="label active">{$LANG.clientareaactive}</span>{else}<span class="label suspended">{$LANG.clientareasuspended}</span>{/if}</td>
 			<td>
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszonemodify">
+				<form method="POST" action="dnsmanagement.php?action=managednszonemodify">
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
 					<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
@@ -423,7 +423,7 @@
 				</form>
 			</td>
 			<td>
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone" onclick="return confirmDelete();">
+				<form method="POST" action="dnsmanagement.php?action=managednszone" onclick="return confirmDelete();">
 					<input type="hidden" name="delete" value="true"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input name="freednshosting" value="{$freednshosting}" type="hidden">
@@ -450,7 +450,7 @@
 			<td colspan="8">
 				{if $searchdataKey}
 				<div style="float:right;">
-					<form id="multidelete" method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+					<form id="multidelete" method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="delete" value="true"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
@@ -465,7 +465,7 @@
 				{/if}
 				{if $q neq ""}
 				<div style="float:left;">
-					<form method="post" action="{$smarty.server.PHP_SELF}?action=managednszone">
+					<form method="post" action="dnsmanagement.php?action=managednszone">
 						<input type="hidden" name="q" value=""/> 
 						<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
 						<input type="hidden" name="domainid" value="{$domainid}"/>
@@ -484,13 +484,13 @@
 <table class="table table-striped table-framed">
     <thead>
         <tr>
-			<th {if $orderby eq "host"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=host&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_searchnametitle}</a></th>
-			<th {if $orderby eq "value"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=value&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_txtrecordvalue}</a></th>
+			<th {if $orderby eq "host"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=host&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_searchnametitle}</a></th>
+			<th {if $orderby eq "value"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=value&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_txtrecordvalue}</a></th>
 			<th><a href="#" onclick="return false">{$LANG.rcdns_ttltitle}</a></th>
 			<th><a href="#" onclick="return false">{$LANG.rcdns_prioritytitle}</a></th>
 			<th><a href="#" onclick="return false">{$LANG.rcdns_weighttitle}</a></th>
 			<th><a href="#" onclick="return false">{$LANG.rcdns_porttitle}</a></th>
-			<th {if $orderby eq "status"} class="headerSort{$sort}"{/if}><a href="{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&orderby=status&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_dnsrecordstatus}</a></th>
+			<th {if $orderby eq "status"} class="headerSort{$sort}"{/if}><a href="dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&orderby=status&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&sort={if $sort eq "desc"}asc{else}desc{/if}&page={$pagenumber}&itemlimit={$itemlimit}">{$LANG.rcdns_dnsrecordstatus}</a></th>
 			<th align="center" colspan="2"><a href="#" onclick="return false">{$LANG.rcdns_dnsactions}</a></th>
 			<th><input id="select-all-records" type="checkbox" /></th>
 		</tr>
@@ -506,7 +506,7 @@
 			<td>{$service.port}</td>
 			<td>{if $service.status eq "Active"}<span class="label active">{$LANG.clientareaactive}</span>{else}<span class="label suspended">{$LANG.clientareasuspended}</span>{/if}</td>
 			<td>
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszonemodify">
+				<form method="POST" action="dnsmanagement.php?action=managednszonemodify">
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
 					<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
@@ -522,7 +522,7 @@
 				</form>
 			</td>
 			<td>
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone" onclick="return confirmDelete();">
+				<form method="POST" action="dnsmanagement.php?action=managednszone" onclick="return confirmDelete();">
 					<input type="hidden" name="delete" value="true"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
@@ -551,7 +551,7 @@
 			<td colspan="10">
 				{if $searchdataKey}
 				<div style="float:right;">
-					<form id="multidelete" method="POST" action="{$smarty.server.PHP_SELF}?action=managednszone">
+					<form id="multidelete" method="POST" action="dnsmanagement.php?action=managednszone">
 					<input type="hidden" name="delete" value="true"/>
 					<input type="hidden" name="domain" value="{$domain}"/>
 					<input type="hidden" name="domainid" value="{$domainid}"/>
@@ -566,7 +566,7 @@
 				{/if}
 				{if $q neq ""}
 				<div style="float:left;">
-					<form method="post" action="{$smarty.server.PHP_SELF}?action=managednszone">
+					<form method="post" action="dnsmanagement.php?action=managednszone">
 						<input type="hidden" name="q" value=""/> 
 						<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
 						<input type="hidden" name="domainid" value="{$domainid}"/>
@@ -606,7 +606,7 @@
 			<td>{$service.retry}</td>
 			<td>{if $service.status eq "Active"}<span class="label active">{$LANG.clientareaactive}</span>{else}<span class="label suspended">{$LANG.clientareasuspended}</span>{/if}</td>
 			<td>
-				<form method="POST" action="{$smarty.server.PHP_SELF}?action=managednszonemodify">
+				<form method="POST" action="dnsmanagement.php?action=managednszonemodify">
 					<input type="hidden" name="domainid" value="{$domainid}"/>
 					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
 					<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
@@ -645,7 +645,7 @@
 <br />
 
 <div class="recordslimit">
-	<form action="{$smarty.server.PHP_SELF}">
+	<form action="dnsmanagement.php">
 		<input type="hidden" name="action" value="managednszone" />
 		<select name="itemlimit" id="itemlimit" onchange="this.form.submit();">
 			<option>{$LANG.resultsperpage}</option>
@@ -664,8 +664,8 @@
 
 <div class="pagination">
     <ul>
-        <li class="prev{if !$prevpage} disabled{/if}"><a href="{if $prevpage}{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&amp;page={$prevpage}&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&itemlimit={$itemlimit}{else}javascript:return false;{/if}">&larr; {$LANG.previouspage}</a></li>
-        <li class="next{if !$nextpage || $nextpage==$pageend} disabled{/if}"><a href="{if $nextpage != $pageend}{$smarty.server.PHP_SELF}?action=managednszone{if $q}&q={$q}{/if}&amp;page={$nextpage}&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&itemlimit={$itemlimit}{else}javascript:return false;{/if}">{$LANG.nextpage} &rarr;</a></li>
+        <li class="prev{if !$prevpage} disabled{/if}"><a href="{if $prevpage}dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&amp;page={$prevpage}&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&itemlimit={$itemlimit}{else}javascript:return false;{/if}">&larr; {$LANG.previouspage}</a></li>
+        <li class="next{if !$nextpage || $nextpage==$pageend} disabled{/if}"><a href="{if $nextpage != $pageend}dnsmanagement.php?action=managednszone{if $q}&q={$q}{/if}&amp;page={$nextpage}&domainid={$domainid}&domain={$domain}&freednshosting={$freednshosting}&nsrecordtype={$recordtype}&itemlimit={$itemlimit}{else}javascript:return false;{/if}">{$LANG.nextpage} &rarr;</a></li>
     </ul>
 </div>
 
