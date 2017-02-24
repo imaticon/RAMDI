@@ -14,7 +14,7 @@
 
 <p>{$LANG.rcdns_activatedomfwddesc} <strong>{$domain}</strong></p>
 <br />
-<form method="post" action="{$smarty.server.PHP_SELF}?action=managedomfwd">
+<form method="post" action="domainforwarding.php?action=managedomfwd">
 	<input type="hidden" name="id" value="{$domainid}"/>
 	<input type="hidden" name="domain" value="{$domain}"/>
 	<input type="hidden" name="activatefwd" value="true"/>
@@ -121,7 +121,7 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<form method="post" action="{$smarty.server.PHP_SELF}?action=managedomfwd">
+					<form method="post" action="domainforwarding.php?action=managedomfwd">
 						<input type="hidden" name="id" value="{if $domainid}{$domainid}{else}{$id}{/if}"/>
 						<input type="hidden" name="domain" value="{$domain}"/>
 						{foreach key=num item=defaultdns from=$requirednsservers.0}
@@ -188,7 +188,7 @@
 
 <br />
 
-<form method="post" action="{$smarty.server.PHP_SELF}?action=managedomfwd">
+<form method="post" action="domainforwarding.php?action=managedomfwd">
 	<table class="table table-striped table-framed">
 		<thead>
 			<tr>
