@@ -1,6 +1,8 @@
 # RAMDI
 Resellerclub Advanced Dns and Domain Forwarding Interface for WHMCS
 
+Product Overview and Description: [RAMDI](http://www.resellerclub-mods.com/en/products/management-mods/ramdi.html)
+
 ## WHMCS Six and Five Client Area Template files
 * dnsmanagement.tpl
 * dnsmanagementadd.tpl
