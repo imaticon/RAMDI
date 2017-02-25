@@ -24,7 +24,7 @@
 {/if}
 
 
-<form method="post" action="{$smarty.server.PHP_SELF}?action=managednszoneadd">
+<form method="post" action="dnsmanagement.php?action=managednszoneadd">
 	<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
 	<input type="hidden" name="freednshosting" value="{$freednshosting}"/>
 	<input type="hidden" name="domain" value="{$domain}"/>
@@ -130,7 +130,7 @@
 
 <br />
 
-<form method="post" action="{$smarty.server.PHP_SELF}?action=managednszone">
+<form method="post" action="dnsmanagement.php?action=managednszone">
 	<input type="hidden" name="nsrecordtype" value="{$recordtype}"/>
 	<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
 	<input name="domain" value="{$domain}" type="hidden"/>
