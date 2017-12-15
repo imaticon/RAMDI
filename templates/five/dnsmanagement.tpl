@@ -112,111 +112,118 @@
 
 <br /><br />
 
-<table class="table table-striped table-framed">
-	<thead>
-		<tr>
-			<th class="textcenter">
-				<form method="POST" action="dnsmanagement.php?action=managednszone">
-					<input type="hidden" name="nsrecordtype" value="A"/>
-					<input type="hidden" name="domainid" value="{$domainid}"/>
-					<input type="hidden" name="domain" value="{$domain}"/>
-					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
-					<input type="hidden" name="page" value="{$pagenumber}"/>
-					<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
-					<input type="hidden" name="q" value="{$q}"/>
-					<input type="submit" value="{$LANG.rcdns_domainadminister} A Records" {if $smarty.request.nsrecordtype=="A"}disabled="disabled"{/if} class="btn"/>
-				</form>
-			</th>
-			<th class="textcenter">
-				<form method="POST" action="dnsmanagement.php?action=managednszone">
-					<input type="hidden" name="nsrecordtype" value="AAAA"/>
-					<input type="hidden" name="domainid" value="{$domainid}"/>
-					<input type="hidden" name="domain" value="{$domain}"/>
-					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
-					<input type="hidden" name="page" value="{$pagenumber}"/>
-					<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
-					<input type="hidden" name="q" value="{$q}"/>
-					<input type="submit" value="{$LANG.rcdns_domainadminister} AAAA Records" {if $smarty.request.nsrecordtype=="AAAA"}disabled="disabled"{/if} class="btn"/>
-				</form>
-			</th>
-			<th class="textcenter">
-				<form method="POST" action="dnsmanagement.php?action=managednszone">
-					<input type="hidden" name="nsrecordtype" value="CNAME"/>
-					<input type="hidden" name="domainid" value="{$domainid}"/>
-					<input type="hidden" name="domain" value="{$domain}"/>
-					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
-					<input type="hidden" name="page" value="{$pagenumber}"/>
-					<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
-					<input type="hidden" name="q" value="{$q}"/>
-					<input type="submit" value="{$LANG.rcdns_domainadminister} CNAME Records" {if $smarty.request.nsrecordtype=="CNAME"}disabled="disabled"{/if} class="btn"/>
-				</form>
-			</th>
-			<th class="textcenter">
-				<form method="POST" action="dnsmanagement.php?action=managednszone">
-					<input type="hidden" name="nsrecordtype" value="MX"/>
-					<input type="hidden" name="domainid" value="{$domainid}"/>
-					<input type="hidden" name="domain" value="{$domain}"/>
-					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
-					<input type="hidden" name="page" value="{$pagenumber}"/>
-					<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
-					<input type="hidden" name="q" value="{$q}"/>
-					<input type="submit" value="{$LANG.rcdns_domainadminister} MX Records" {if $smarty.request.nsrecordtype=="MX"}disabled="disabled"{/if} class="btn"/>
-				</form>
-			</th>
-		</tr>
-	</thead>
-	<thead>
-		<tr>
-			<th class="textcenter">
-				<form method="POST" action="dnsmanagement.php?action=managednszone">
-					<input type="hidden" name="nsrecordtype" value="NS"/>
-					<input type="hidden" name="domainid" value="{$domainid}"/>
-					<input type="hidden" name="domain" value="{$domain}"/>
-					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
-					<input type="hidden" name="page" value="{$pagenumber}"/>
-					<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
-					<input type="hidden" name="q" value="{$q}"/>
-					<input type="submit" value="{$LANG.rcdns_domainadminister} NS Records" {if $smarty.request.nsrecordtype=="NS"}disabled="disabled"{/if} class="btn"/>
-				</form>
-			</th>
-			<th class="textcenter">
-				<form method="POST" action="dnsmanagement.php?action=managednszone">
-					<input type="hidden" name="nsrecordtype" value="TXT"/>
-					<input type="hidden" name="domainid" value="{$domainid}"/>
-					<input type="hidden" name="domain" value="{$domain}"/>
-					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
-					<input type="hidden" name="page" value="{$pagenumber}"/>
-					<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
-					<input type="hidden" name="q" value="{$q}"/>
-					<input type="submit" value="{$LANG.rcdns_domainadminister} TXT Records" {if $smarty.request.nsrecordtype=="TXT"}disabled="disabled"{/if} class="btn"/>
-				</form>
-			</th>
-			<th class="textcenter">
-				<form method="POST" action="dnsmanagement.php?action=managednszone">
-					<input type="hidden" name="nsrecordtype" value="SRV"/>
-					<input type="hidden" name="domainid" value="{$domainid}"/>
-					<input type="hidden" name="domain" value="{$domain}"/>
-					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
-					<input type="hidden" name="page" value="{$pagenumber}"/>
-					<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
-					<input type="hidden" name="q" value="{$q}"/>
-					<input type="submit" value="{$LANG.rcdns_domainadminister} SRV Records" {if $smarty.request.nsrecordtype=="SRV"}disabled="disabled"{/if} class="btn"/>
-				</form>
-			</th>
-			<th class="textcenter">
-				<form method="POST" action="dnsmanagement.php?action=managednszone">
-					<input type="hidden" name="nsrecordtype" value="SOA"/>
-					<input type="hidden" name="domainid" value="{$domainid}"/>
-					<input type="hidden" name="domain" value="{$domain}"/>
-					<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
-					<input type="hidden" name="page" value="{$pagenumber}"/>
-					<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
-					<input type="hidden" name="q" value="{$q}"/>
-					<input type="submit" value="{$LANG.rcdns_domainadminister} SOA" {if $smarty.request.nsrecordtype=="SOA"}disabled="disabled"{/if} class="btn"/>
-				</form>
-			</th>
-		</tr>
-	</thead>
+<table class="table table-framed">
+	<tr>
+		<td>
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=managednszone">
+						<input type="hidden" name="nsrecordtype" value="A"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="hidden" name="page" value="{$pagenumber}"/>
+						<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
+						<input type="hidden" name="q" value="{$q}"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} A Records" {if $smarty.request.nsrecordtype=="A"}disabled="disabled"{/if} class="btn"/>
+					</form>
+			</div>
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=managednszone">
+						<input type="hidden" name="nsrecordtype" value="AAAA"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="hidden" name="page" value="{$pagenumber}"/>
+						<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
+						<input type="hidden" name="q" value="{$q}"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} AAAA Records" {if $smarty.request.nsrecordtype=="AAAA"}disabled="disabled"{/if} class="btn"/>
+					</form>
+			</div>
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=managednszone">
+						<input type="hidden" name="nsrecordtype" value="CNAME"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="hidden" name="page" value="{$pagenumber}"/>
+						<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
+						<input type="hidden" name="q" value="{$q}"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} CNAME Records" {if $smarty.request.nsrecordtype=="CNAME"}disabled="disabled"{/if} class="btn"/>
+					</form>
+			</div>
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=managednszone">
+						<input type="hidden" name="nsrecordtype" value="MX"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="hidden" name="page" value="{$pagenumber}"/>
+						<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
+						<input type="hidden" name="q" value="{$q}"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} MX Records" {if $smarty.request.nsrecordtype=="MX"}disabled="disabled"{/if} class="btn"/>
+					</form>
+			</div>
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=managednszone">
+						<input type="hidden" name="nsrecordtype" value="NS"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="hidden" name="page" value="{$pagenumber}"/>
+						<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
+						<input type="hidden" name="q" value="{$q}"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} NS Records" {if $smarty.request.nsrecordtype=="NS"}disabled="disabled"{/if} class="btn"/>
+					</form>
+			</div>
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=managednszone">
+						<input type="hidden" name="nsrecordtype" value="TXT"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="hidden" name="page" value="{$pagenumber}"/>
+						<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
+						<input type="hidden" name="q" value="{$q}"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} TXT Records" {if $smarty.request.nsrecordtype=="TXT"}disabled="disabled"{/if} class="btn"/>
+					</form>
+			</div>
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=managednszone">
+						<input type="hidden" name="nsrecordtype" value="SRV"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="hidden" name="page" value="{$pagenumber}"/>
+						<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
+						<input type="hidden" name="q" value="{$q}"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} SRV Records" {if $smarty.request.nsrecordtype=="SRV"}disabled="disabled"{/if} class="btn"/>
+					</form>
+			</div>
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=managednszone">
+						<input type="hidden" name="nsrecordtype" value="SOA"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="hidden" name="page" value="{$pagenumber}"/>
+						<input type="hidden" name="itemlimit" value="{$itemlimit}"/>
+						<input type="hidden" name="q" value="{$q}"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} SOA" {if $smarty.request.nsrecordtype=="SOA"}disabled="disabled"{/if} class="btn"/>
+					</form>
+			</div>
+			{if $is_domregister eq "true" && $is_dnssec neq "on"}
+			<div style="float:left;padding:0px 3px 2px 0px;">
+					<form method="POST" action="dnsmanagement.php?action=dnsseczone">
+						<input type="hidden" name="nsrecordtype" value="DNSSEC"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
+						<input type="hidden" name="domain" value="{$domain}"/>
+						<input name="freednshosting" value="{$freednshosting}" type="hidden"/>
+						<input type="submit" value="{$LANG.rcdns_domainadminister} DNSSEC" class="btn btn-info"/>
+					</form>
+			</div>
+			{/if}
+		</td>
+	</tr>
 </table>
 
 <br/>
