@@ -7,6 +7,7 @@ Resellerclub Advanced Dns and Domain Forwarding Interface for WHMCS
 * dnsmanagementmodify.tpl
 * dnsmanagementview.tpl
 * domainforwarding.tpl
+* dnsmanagementdsigner.tpl
 
 ## Compatibility
 This theme is compatible with WHMCS 6.x - 7.x
