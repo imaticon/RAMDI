@@ -63,8 +63,11 @@
 				<input name="host" type="hidden" value="{$hostrecord}"/>
 				<span><strong>{$hostrecord}</strong></span>
 				{else}
-				<input name="host" type="hidden" value="{$hostrecord}"/>
-				<span><strong>{$hostrecord}.{$domain}</strong></span>
+				<input name="currenthost" type="hidden" value="{$currenthost}"/>
+				<div class="input-group">
+					<input class="form-control" name="host" type="text" value="{$hostrecord}"/>
+					<span class="input-group-addon">.{$domain}</span>
+				</div>
 				{/if}
 			</td>
 		</tr>
