@@ -63,8 +63,9 @@
 					<input name="host" type="hidden" value="{$hostrecord}"/>
 					<span><strong>{$hostrecord}</strong></span>
 					{else}
-					<input name="host" type="hidden" value="{$hostrecord}"/>
-					<span><strong>{$hostrecord}.{$domain}</strong></span>
+					<input name="currenthost" type="hidden" value="{$currenthost}"/>
+					<input name="host" type="text" value="{$hostrecord}"/>
+					<span><strong>.{$domain}</strong></span>
 					{/if}
 				</td>
 			</tr>
